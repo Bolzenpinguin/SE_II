@@ -4,66 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1e9ff55a-b080-4c88-9c0d-b56e5328d9ea" name="Changes" comment="Clean Up 2.0">
-      <change afterPath="$PROJECT_DIR$/../.metadata/.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.metadata/.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.resources/.history/10/f0a7d1b976ee001d19d6ac98c2722722" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.resources/.history/1a/3063c5a276ee001d19d6ac98c2722722" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.resources/.history/2/902af1c276ee001d19d6ac98c2722722" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.resources/.history/46/b0cf3de876ee001d19d6ac98c2722722" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.resources/.history/5/c09ab4b476ee001d19d6ac98c2722722" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.resources/.history/76/704be3a276ee001d19d6ac98c2722722" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.resources/.history/7b/c0f63de876ee001d19d6ac98c2722722" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.resources/.history/88/50f4ead576ee001d19d6ac98c2722722" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.resources/.history/92/e0a1ed2677ee001d19d6ac98c2722722" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.resources/.history/94/d0cebeed76ee001d19d6ac98c2722722" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.resources/.history/b2/e0443ee876ee001d19d6ac98c2722722" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.resources/.history/ca/40fd23e076ee001d19d6ac98c2722722" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.resources/.history/d4/a009d60777ee001d19d6ac98c2722722" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.resources/.history/e0/a0b7ebd576ee001d19d6ac98c2722722" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.resources/.projects/.org.eclipse.egit.core.cmp/.location" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.resources/.projects/Tipp1/.indexes/af/history.index" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.resources/.projects/Tipp1/.indexes/e4/history.index" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.resources/.projects/Tipp1/.indexes/history.index" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.resources/.projects/Tipp1/.indexes/properties.index" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.resources/.projects/Tipp1/.markers" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.resources/.projects/Tipp1/org.eclipse.egit.core/GitProjectData.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.resources/.projects/Tipp1/org.eclipse.jdt.core/state.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.resources/.root/.indexes/history.version" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.resources/.root/.indexes/properties.index" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.resources/.root/.indexes/properties.version" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.resources/.root/1.tree" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.resources/.safetable/org.eclipse.core.resources" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.debug.core/.launches/main.launch" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.debug.ui/launchConfigurationHistory.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.jdt.core/1865797976.index" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.jdt.core/3000154377.index" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.jdt.core/3868579422.index" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.jdt.core/assumedExternalFilesCache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.jdt.core/externalFilesCache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.jdt.core/externalLibsTimeStamps" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.jdt.core/javaLikeNames.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.jdt.core/nonChainingJarsCache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.jdt.core/savedIndexNames.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.jdt.core/variablesAndContainers.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.jdt.launching/.install.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.jdt.launching/libraryInfos.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.jdt.ui/OpenTypeHistory.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.jdt.ui/QualifiedTypeNameHistory.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.jdt.ui/dialog_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.ltk.core.refactoring/.refactorings/Tipp1/2023/5/19/refactorings.history" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.ltk.core.refactoring/.refactorings/Tipp1/2023/5/19/refactorings.index" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.ltk.ui.refactoring/dialog_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.m2e.core/workspaceState.ser" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.m2e.logback/0.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.m2e.logback/logback.2.1.0.20221015-0744.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.oomph.setup/workspace.setup" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.tips.ide/dialog_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.ui.intro/introstate" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.ui.workbench/workingsets.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.metadata/version.ini" afterDir="false" />
-    </list>
+    <list default="true" id="1e9ff55a-b080-4c88-9c0d-b56e5328d9ea" name="Changes" comment="Clean Up 2.0" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -79,11 +20,11 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -97,26 +38,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "master",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "advanced.settings",
-    "show.migrate.to.gradle.popup": "false",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;advanced.settings&quot;,
+    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -128,6 +69,7 @@
       <workItem from="1684400750078" duration="79000" />
       <workItem from="1684400871309" duration="59000" />
       <workItem from="1684401563702" duration="9285000" />
+      <workItem from="1684415496103" duration="654000" />
     </task>
     <task id="LOCAL-00001" summary="Create basic Menu">
       <created>1684404990540</created>
@@ -192,7 +134,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684414811023</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Clean Up 2.0">
+      <created>1684415512148</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1684415512148</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
