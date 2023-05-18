@@ -4,7 +4,6 @@ import java.io.*;
 import java.util.*;
 
 public class ScoreBoard extends JPanel {
-    private JLabel headingLabel;
 
     public ScoreBoard(MainFrame frame) {
         setLayout(new BorderLayout());
@@ -13,7 +12,7 @@ public class ScoreBoard extends JPanel {
         String[][] data = loadData();
 
         // get first line as heading
-        headingLabel = new JLabel(data[0][0], SwingConstants.CENTER);
+        JLabel headingLabel = new JLabel(data[0][0], SwingConstants.CENTER);
         add(headingLabel, BorderLayout.NORTH);
 
         String[] columnNames = {"Rank", "Country", "Driver", "Points", "Wins", "Podiums"};
@@ -32,6 +31,7 @@ public class ScoreBoard extends JPanel {
     }
 
     private String[][] loadData() {
+        // read csv file and get all the content -> "," is the seperator
         ArrayList<String[]> data = new ArrayList<>();
         try (BufferedReader reader = new BufferedReader(new FileReader("textContent/Score.csv"))) {
             String line;
