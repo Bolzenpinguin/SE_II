@@ -1,0 +1,4 @@
+INDEX VERSION 1.131+/Users/kurtschubert/Desktop/Uni (MI)/4. Semester/I151 Software Engineering II/Abgabe/java_projekt/.metadata/.plugins/org.eclipse.jdt.core
+3868579422.index
+1865797976.index
+3000154377.index
