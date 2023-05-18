@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1e9ff55a-b080-4c88-9c0d-b56e5328d9ea" name="Changes" comment="Cleanup" />
+    <list default="true" id="1e9ff55a-b080-4c88-9c0d-b56e5328d9ea" name="Changes" comment="Remove Settings" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -68,7 +68,7 @@
       <updated>1684400748977</updated>
       <workItem from="1684400750078" duration="79000" />
       <workItem from="1684400871309" duration="59000" />
-      <workItem from="1684401563702" duration="7956000" />
+      <workItem from="1684401563702" duration="8281000" />
     </task>
     <task id="LOCAL-00001" summary="Create basic Menu">
       <created>1684404990540</created>
@@ -112,7 +112,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684413890099</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Remove Settings">
+      <created>1684414474117</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1684414474117</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -147,6 +154,7 @@
     <MESSAGE value="Help &amp; Instructions ready" />
     <MESSAGE value="ScoreBoard added" />
     <MESSAGE value="Cleanup" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cleanup" />
+    <MESSAGE value="Remove Settings" />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove Settings" />
   </component>
 </project>
