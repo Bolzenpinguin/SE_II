@@ -6,6 +6,9 @@ public class Play extends JPanel {
         JButton backButton = new JButton("Back to Main Menu");
         backButton.addActionListener(e -> frame.showPanel("MainMenu"));
         add(backButton);
-        // Add other components here
+
+
+        // Logic? Vorschläge
+
     }
 }

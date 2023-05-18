@@ -9,8 +9,10 @@ public class ScoreBoard extends JPanel {
     public ScoreBoard(MainFrame frame) {
         setLayout(new BorderLayout());
 
+        // get Data from CSV
         String[][] data = loadData();
 
+        // get first line as heading
         headingLabel = new JLabel(data[0][0], SwingConstants.CENTER);
         add(headingLabel, BorderLayout.NORTH);
 
