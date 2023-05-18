@@ -20,6 +20,19 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="b427dfae-8bf5-4711-8a6b-a060b295a0ff" />
+        <option name="url" value="https://github.com/Bolzenpinguin/SE_II.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
   <component name="ProjectId" id="2PxZZYZNnJtEpjAy8VHd23lrgYn" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -55,7 +68,7 @@
       <updated>1684400748977</updated>
       <workItem from="1684400750078" duration="79000" />
       <workItem from="1684400871309" duration="59000" />
-      <workItem from="1684401563702" duration="3494000" />
+      <workItem from="1684401563702" duration="3838000" />
     </task>
     <task id="LOCAL-00001" summary="Create basic Menu">
       <created>1684404990540</created>
@@ -64,7 +77,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684404990540</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Create basic Menu">
+      <created>1684405403341</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1684405403341</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -81,7 +101,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="HEAD" />
+                        <option value="master" />
                       </list>
                     </value>
                   </entry>
