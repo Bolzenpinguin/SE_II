@@ -6,8 +6,9 @@ public class Main {
 			MainFrame frame = new MainFrame();
 			frame.setTitle("Tipp1");
 			frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+			frame.pack();
 			frame.setLocationRelativeTo(null);
-			frame.setSize(500, 500);
+			frame.setSize(1000, 500);
 			frame.setVisible(true);
 		});
 	}

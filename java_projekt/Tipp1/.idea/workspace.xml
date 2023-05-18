@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1e9ff55a-b080-4c88-9c0d-b56e5328d9ea" name="Changes" comment="Create basic Menu" />
+    <list default="true" id="1e9ff55a-b080-4c88-9c0d-b56e5328d9ea" name="Changes" comment="XML Upload">
+      <change afterPath="$PROJECT_DIR$/textContent/Help.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/textContent/Instructions.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Tipp1/Help.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tipp1/Help.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Help.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Help.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -68,7 +74,7 @@
       <updated>1684400748977</updated>
       <workItem from="1684400750078" duration="79000" />
       <workItem from="1684400871309" duration="59000" />
-      <workItem from="1684401563702" duration="3838000" />
+      <workItem from="1684401563702" duration="4559000" />
     </task>
     <task id="LOCAL-00001" summary="Create basic Menu">
       <created>1684404990540</created>
@@ -84,7 +90,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684405403341</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="XML Upload">
+      <created>1684405457390</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1684405457390</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -115,6 +128,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Create basic Menu" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create basic Menu" />
+    <MESSAGE value="XML Upload" />
+    <option name="LAST_COMMIT_MESSAGE" value="XML Upload" />
   </component>
 </project>
