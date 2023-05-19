@@ -16,3 +16,6 @@ public class Main {
 
 
 // Das ist ein Test
+
+
+// EIn zweiter TEst von Kurt

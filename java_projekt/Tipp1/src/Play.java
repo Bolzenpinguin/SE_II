@@ -78,7 +78,7 @@ public class Play extends JPanel {
     }
 
     private void loadDriversFromCsv() {
-        try (BufferedReader reader = new BufferedReader(new FileReader("textContent/Score.csv"))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader("java_projekt/Tipp1/textContent/Score.csv"))) {
             String line;
             reader.readLine(); // Skip the header line
             while ((line = reader.readLine()) != null) {
