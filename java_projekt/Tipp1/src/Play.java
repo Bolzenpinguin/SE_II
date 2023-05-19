@@ -130,7 +130,7 @@ public class Play extends JPanel {
     }
 
     private void saveOrder() {
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter("textContent/Tipp.csv"))) {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter("java_projekt/Tipp1/textContent/Tipp.csv"))) {
             for (int i = 0; i < listModel.getSize(); i++) {
                 writer.write((i + 1) + "," + listModel.getElementAt(i));
                 writer.newLine();
