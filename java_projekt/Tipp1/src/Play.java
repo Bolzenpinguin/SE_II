@@ -50,15 +50,6 @@ public class Play extends JPanel {
         JScrollPane scrollPane = new JScrollPane(driverList);
         scrollPane.setPreferredSize(new Dimension(200, 300)); // Set preferred size
 
-        // Create a rounded border
-        scrollPane.setBorder(new LineBorder(Color.BLACK) {
-            @Override
-            public void paintBorder(Component c, Graphics g, int x, int y, int width, int height) {
-                g.setColor(lineColor);
-                g.drawRoundRect(x, y, width - 1, height - 1, 20, 20);
-            }
-        });
-
         JPanel listPanel = new JPanel();
         listPanel.add(scrollPane);
         add(listPanel, BorderLayout.CENTER);
