@@ -33,7 +33,7 @@ public class ScoreBoard extends JPanel {
     private String[][] loadData() {
         // read csv file and get all the content -> "," is the seperator
         ArrayList<String[]> data = new ArrayList<>();
-        try (BufferedReader reader = new BufferedReader(new FileReader("textContent/Score.csv"))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader("java_projekt/Tipp1/textContent/Score.csv"))) {
             String line;
             while ((line = reader.readLine()) != null) {
                 String[] rowData = line.split(",");

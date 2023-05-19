@@ -19,7 +19,7 @@ public class Instructions extends JPanel {
 
         add(backButton, BorderLayout.PAGE_END);
 
-        try (BufferedReader reader = new BufferedReader(new FileReader("textContent/Instructions.txt"))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader("java_projekt/Tipp1/textContent/Instructions.txt"))) {
             instructionText.read(reader, null);
         } catch (IOException e) {
             instructionText.setText("Instructions file not found!");
