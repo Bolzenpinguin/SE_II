@@ -69,9 +69,13 @@ public class Play extends JPanel {
         JButton backButton = new JButton("Back to Main Menu");
         backButton.addActionListener(e -> frame.showPanel("MainMenu"));
 
+        JButton evaluationButton = new JButton("Evaluate Tips");
+        evaluationButton.addActionListener(e -> evaluateTips());
+
         JPanel buttonPanel = new JPanel(new FlowLayout(FlowLayout.CENTER));
         buttonPanel.add(saveButton);
         buttonPanel.add(backButton);
+        buttonPanel.add(evaluationButton);
 
         add(buttonPanel, BorderLayout.PAGE_END);
 
@@ -130,7 +134,7 @@ public class Play extends JPanel {
     }
 
     private void saveOrder() {
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter("textContent/Tipp.csv"))) {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter("java_projekt/Tipp1/textContent/Tipp.csv"))) {
             for (int i = 0; i < listModel.getSize(); i++) {
                 writer.write((i + 1) + "," + listModel.getElementAt(i));
                 writer.newLine();
@@ -140,5 +144,62 @@ public class Play extends JPanel {
             e.printStackTrace();
         }
     }
+
+    private void evaluateTips() {
+        String tippsFile = "java_projekt/Tipp1/textContent/Tipp.csv";
+        String siegerFile = "java_projekt/Tipp1/textContent/Score.csv";
+
+        try (BufferedReader tippsReader = new BufferedReader(new FileReader(tippsFile));
+         BufferedReader ergebnisReader = new BufferedReader(new FileReader(siegerFile))) {
+
+        ergebnisReader.readLine(); // Erste Zeile der Ergebnisdatei überspringen
+
+        String tippLine;
+        String ergebnisLine;
+
+        while ((tippLine = tippsReader.readLine()) != null) {
+            String[] tippData = tippLine.split(",");
+
+            int platzierung = Integer.parseInt(tippData[0]);
+            String tippFahrer = tippData[1];
+
+            ergebnisReader.mark(4096); // Markiere die aktuelle Position im Stream
+
+            while ((ergebnisLine = ergebnisReader.readLine()) != null) {
+                String[] ergebnisData = ergebnisLine.split(",");
+                String ergebnisFahrer = ergebnisData[2]; // Index 2 für den Fahrernamen
+
+                if (tippFahrer.equals(ergebnisFahrer)) {
+                    int ergebnisPlatzierung = Integer.parseInt(ergebnisData[0]);
+
+                    int punkteVergeben = berechnePunkte(platzierung, ergebnisPlatzierung);
+                    System.out.println("Tipp: " + tippFahrer + ", Punkte: " + punkteVergeben);
+
+                    break; // Fahrer gefunden, Schleife verlassen
+                }
+            }
+
+            ergebnisReader.reset(); // Setze den Stream auf die markierte Position zurück
+        }
+    } catch (IOException e) {
+        e.printStackTrace();
+    }
+}
+
+private static int berechnePunkte(int tippPlatzierung, int ergebnisPlatzierung) {
+    int platzDiff = Math.abs(tippPlatzierung - ergebnisPlatzierung);
+    if (platzDiff == 0) {
+        return 100; // Richtig getippt, 100 Punkte
+    } else if (platzDiff == 1) {
+        return 80; // 1 Platz daneben, 80 Punkte
+    } else if (platzDiff == 2) {
+        return 60; // 2 Plätze daneben, 60 Punkte
+    } else if (platzDiff == 3) {
+        return 40; // 3 Plätze daneben, 40 Punkte
+    } else if (platzDiff == 4) {
+        return 20; // 4 Plätze daneben, 20 Punkte
+    }
+    return 0; // Sonst, 0 Punkte
+}
 
 }
