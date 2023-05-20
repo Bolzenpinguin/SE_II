@@ -15,8 +15,8 @@ public class MainFrame extends JFrame {
 
         mainMenu = new MainMenu(this);
         help = new Help(this);
-        play = new Play(this);
         scoreBoard = new ScoreBoard(this);
+        play = new Play(this, scoreBoard);
         instructions = new Instructions(this);
 
         add(mainMenu, "MainMenu");
