@@ -60,20 +60,17 @@ public class Play extends JPanel {
         listPanel.add(scrollPane);
         add(listPanel, BorderLayout.CENTER);
 
-        JButton saveButton = new JButton("Simulate race day");
-        saveButton.addActionListener(e -> {
-            saveOrder();
-            updateScore();
-        });
-
         JButton backButton = new JButton("Back to Main Menu");
         backButton.addActionListener(e -> frame.showPanel("MainMenu"));
 
         JButton evaluationButton = new JButton("Evaluate Tips");
-        evaluationButton.addActionListener(e -> evaluateTips());
+        evaluationButton.addActionListener(e -> {
+            saveOrder();
+            updateScore();
+            evaluateTips();
+        });
 
         JPanel buttonPanel = new JPanel(new FlowLayout(FlowLayout.CENTER));
-        buttonPanel.add(saveButton);
         buttonPanel.add(backButton);
         buttonPanel.add(evaluationButton);
 
