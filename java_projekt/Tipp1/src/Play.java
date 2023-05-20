@@ -190,18 +190,20 @@ public class Play extends JPanel {
 
 private static int berechnePunkte(int tippPlatzierung, int ergebnisPlatzierung) {
     int platzDiff = Math.abs(tippPlatzierung - ergebnisPlatzierung);
-    if (platzDiff == 0) {
-        return 100; // Richtig getippt, 100 Punkte
-    } else if (platzDiff == 1) {
-        return 80; // 1 Platz daneben, 80 Punkte
-    } else if (platzDiff == 2) {
-        return 60; // 2 Plätze daneben, 60 Punkte
-    } else if (platzDiff == 3) {
-        return 40; // 3 Plätze daneben, 40 Punkte
-    } else if (platzDiff == 4) {
-        return 20; // 4 Plätze daneben, 20 Punkte
+    switch (platzDiff) {
+        case 0:
+            return 100;
+        case 1:
+            return 80;
+        case 2:
+            return 60;
+        case 3:
+            return 40;
+        case 4:
+            return 20;
+        default:
+            return 0; // für platzDiff größer als 4
     }
-    return 0; // Sonst, 0 Punkte
 }
 
     private void updateScore() {
