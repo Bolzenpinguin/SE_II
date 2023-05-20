@@ -13,8 +13,10 @@ import java.util.List;
 public class Play extends JPanel {
     private DefaultListModel<String> listModel;
     private JList<String> driverList;
+    private ScoreBoard scoreBoard;
 
-    public Play(MainFrame frame) {
+    public Play(MainFrame frame, ScoreBoard scoreBoard) {
+        this.scoreBoard = scoreBoard;
         setLayout(new BorderLayout());
 
         listModel = new DefaultListModel<>();
@@ -180,6 +182,8 @@ public class Play extends JPanel {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+        scoreBoard.updateData();
+        JOptionPane.showMessageDialog(this, "Scoreboard has been updated. Check to see your results.");
     }
-    
 }
