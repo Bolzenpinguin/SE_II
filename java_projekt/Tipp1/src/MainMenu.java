@@ -9,7 +9,7 @@ public class MainMenu extends JPanel {
         JButton playButton = new JButton("Play");
         JButton helpButton = new JButton("Help");
         JButton scoreButton = new JButton("Scoreboard");
-        JButton instructionsButton = new JButton("instructions");
+        JButton instructionsButton = new JButton("Instructions");
         JButton quitButton = new JButton("Quit");
 
         playButton.setAlignmentX(Component.CENTER_ALIGNMENT);

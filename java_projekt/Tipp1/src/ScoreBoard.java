@@ -1,9 +1,11 @@
+import javax.swing.table.DefaultTableModel;
 import javax.swing.*;
 import java.awt.*;
 import java.io.*;
 import java.util.*;
 
 public class ScoreBoard extends JPanel {
+    private JTable table;
 
     public ScoreBoard(MainFrame frame) {
         setLayout(new BorderLayout());
@@ -16,7 +18,7 @@ public class ScoreBoard extends JPanel {
         add(headingLabel, BorderLayout.NORTH);
 
         String[] columnNames = {"Rank", "Country", "Driver", "Points", "Wins", "Podiums"};
-        JTable table = new JTable(Arrays.copyOfRange(data, 1, data.length), columnNames) {
+        table = new JTable(Arrays.copyOfRange(data, 1, data.length), columnNames) {
             @Override
             public boolean isCellEditable(int row, int column) {
                 return false;  // This causes all cells to be not editable
@@ -28,6 +30,13 @@ public class ScoreBoard extends JPanel {
         JButton backButton = new JButton("Back to Main Menu");
         backButton.addActionListener(e -> frame.showPanel("MainMenu"));
         add(backButton, BorderLayout.PAGE_END);
+    }
+
+    public void updateData() {
+        String[][] data = loadData();
+        table.setModel(new DefaultTableModel(
+            Arrays.copyOfRange(data, 1, data.length),
+            new String[]{"Rank", "Country", "Driver", "Points", "Wins", "Podiums"}));
     }
 
     private String[][] loadData() {
