@@ -60,10 +60,10 @@ public class Play extends JPanel {
         listPanel.add(scrollPane);
         add(listPanel, BorderLayout.CENTER);
 
-        JButton backButton = new JButton("Back to Main Menu");
+        JButton backButton = new JButton("Zurück zum Hauptmenü");
         backButton.addActionListener(e -> frame.showPanel("MainMenu"));
 
-        JButton evaluationButton = new JButton("Evaluate Tips");
+        JButton evaluationButton = new JButton("Tipp auswerten");
         evaluationButton.addActionListener(e -> {
             saveOrder();
             updateScore();

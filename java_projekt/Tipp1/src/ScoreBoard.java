@@ -28,7 +28,7 @@ public class ScoreBoard extends JPanel {
 
         // Create a JPanel with FlowLayout to center the label
         JPanel labelPanel = new JPanel(new FlowLayout(FlowLayout.CENTER));
-        JLabel resultsLabel = new JLabel("Results");
+        JLabel resultsLabel = new JLabel("Ergebnisse");
         labelPanel.add(resultsLabel);
         add(labelPanel);
 
@@ -39,7 +39,7 @@ public class ScoreBoard extends JPanel {
 
         // Create a JPanel with FlowLayout to center the button
         JPanel buttonPanel = new JPanel(new FlowLayout(FlowLayout.CENTER));
-        JButton backButton = new JButton("Back to Main Menu");
+        JButton backButton = new JButton("Zurück zum Hauptmenü");
         backButton.addActionListener(e -> frame.showPanel("MainMenu"));
         buttonPanel.add(backButton);
         add(buttonPanel);
@@ -51,11 +51,11 @@ public class ScoreBoard extends JPanel {
 
         scoreTable.setModel(new DefaultTableModel(
             scoreData,
-            new String[]{"Rank", "Country", "Driver", "Points", "Wins", "Podiums"}));
+            new String[]{"Platzierung", "Land", "Fahrer", "Punkte", "Gewinne", "Podeste"}));
 
         resultsTable.setModel(new DefaultTableModel(
             resultsData,
-            new String[]{"Driver", "Points"}));
+            new String[]{"Fahrer", "Erreichte Punktzahl"}));
     }
 
     private String[][] loadScoreData() {
