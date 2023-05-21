@@ -14,10 +14,12 @@ public class Instructions extends JPanel {
         JScrollPane scrollPane = new JScrollPane(instructionText);
         add(scrollPane, BorderLayout.CENTER);
 
-        JButton backButton = new JButton("Back to Main Menu");
+        JButton backButton = new JButton("Zurück zum Hauptmenü");
         backButton.addActionListener(e -> frame.showPanel("MainMenu"));
 
-        add(backButton, BorderLayout.PAGE_END);
+        JPanel buttonPanel = new JPanel(new FlowLayout(FlowLayout.CENTER));
+        buttonPanel.add(backButton);
+        add(buttonPanel, BorderLayout.PAGE_END);
 
         try (BufferedReader reader = new BufferedReader(new FileReader("java_projekt/Tipp1/textContent/Instructions.txt"))) {
             instructionText.read(reader, null);
