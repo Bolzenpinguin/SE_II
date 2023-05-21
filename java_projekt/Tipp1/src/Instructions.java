@@ -14,7 +14,7 @@ public class Instructions extends JPanel {
         JScrollPane scrollPane = new JScrollPane(instructionText);
         add(scrollPane, BorderLayout.CENTER);
 
-        JButton backButton = new JButton("Back to Main Menu");
+        JButton backButton = new JButton("Zurück zum Hauptmenü");
         backButton.addActionListener(e -> frame.showPanel("MainMenu"));
 
         add(backButton, BorderLayout.PAGE_END);
