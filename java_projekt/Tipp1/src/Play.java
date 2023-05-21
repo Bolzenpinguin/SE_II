@@ -54,16 +54,16 @@ public class Play extends JPanel {
         });
 
         JScrollPane scrollPane = new JScrollPane(driverList);
-        scrollPane.setPreferredSize(new Dimension(200, 300)); // Set preferred size
+        scrollPane.setPreferredSize(new Dimension(200, 500)); // Set preferred size
 
         JPanel listPanel = new JPanel();
         listPanel.add(scrollPane);
         add(listPanel, BorderLayout.CENTER);
 
-        JButton backButton = new JButton("Back to Main Menu");
+        JButton backButton = new JButton("Zurück zum Hauptmenü");
         backButton.addActionListener(e -> frame.showPanel("MainMenu"));
 
-        JButton evaluationButton = new JButton("Evaluate Tips");
+        JButton evaluationButton = new JButton("Tipp auswerten");
         evaluationButton.addActionListener(e -> {
             saveOrder();
             updateScore();
@@ -147,9 +147,11 @@ public class Play extends JPanel {
     private void evaluateTips() {
         String tippsFile = "java_projekt/Tipp1/textContent/Tipp.csv";
         String siegerFile = "java_projekt/Tipp1/textContent/Score.csv";
+        String resultsFile = "java_projekt/Tipp1/textContent/Results.csv";
 
         try (BufferedReader tippsReader = new BufferedReader(new FileReader(tippsFile));
-         BufferedReader ergebnisReader = new BufferedReader(new FileReader(siegerFile))) {
+            BufferedReader ergebnisReader = new BufferedReader(new FileReader(siegerFile));
+            BufferedWriter resultsWriter = new BufferedWriter(new FileWriter(resultsFile))) {
 
         ergebnisReader.readLine(); // Erste Zeile der Ergebnisdatei überspringen
 
@@ -172,7 +174,9 @@ public class Play extends JPanel {
                     int ergebnisPlatzierung = Integer.parseInt(ergebnisData[0]);
 
                     int punkteVergeben = berechnePunkte(platzierung, ergebnisPlatzierung);
-                    System.out.println("Tipp: " + tippFahrer + ", Punkte: " + punkteVergeben);
+                    
+                    resultsWriter.write(tippFahrer + "," + punkteVergeben);
+                    resultsWriter.newLine();
 
                     break; // Fahrer gefunden, Schleife verlassen
                 }
@@ -180,6 +184,7 @@ public class Play extends JPanel {
 
             ergebnisReader.reset(); // Setze den Stream auf die markierte Position zurück
         }
+        resultsWriter.flush();
     } catch (IOException e) {
         e.printStackTrace();
     }
@@ -244,6 +249,22 @@ private static int berechnePunkte(int tippPlatzierung, int ergebnisPlatzierung) 
         }
 
         scoreBoard.updateData();
-        JOptionPane.showMessageDialog(this, "Scoreboard has been updated. Check to see your results.");
+        StringBuilder content = new StringBuilder();
+        try (BufferedReader reader = new BufferedReader(new FileReader("java_projekt/Tipp1/textContent/Results.csv"))){
+            String line;
+            while ((line = reader.readLine()) != null){
+                String[] splitLine = line.split(",");
+                if (splitLine.length == 2) {
+                    String name = splitLine[0];
+                    String points = splitLine[1];
+                    String formattedLine = "Fahrer: " + name + ", Punkte: " + points;
+                    content.append(formattedLine).append("\n");
+                }
+            }
+        } catch (IOException e){
+            e.printStackTrace();
+        }
+        content.append("\n(Deine Ergebnisse werden auch unter Scoreboard angezeigt!)");
+        JOptionPane.showMessageDialog(this, content.toString(), "Ergebnisse", 1);
     }
 }

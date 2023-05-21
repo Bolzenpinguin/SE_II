@@ -6,11 +6,11 @@ public class MainMenu extends JPanel {
 
         setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
 
-        JButton playButton = new JButton("Play");
-        JButton helpButton = new JButton("Help");
+        JButton playButton = new JButton("Spielen");
+        JButton helpButton = new JButton("Hilfe");
         JButton scoreButton = new JButton("Scoreboard");
-        JButton instructionsButton = new JButton("Instructions");
-        JButton quitButton = new JButton("Quit");
+        JButton instructionsButton = new JButton("Anleitung");
+        JButton quitButton = new JButton("Verlassen");
 
         playButton.setAlignmentX(Component.CENTER_ALIGNMENT);
         helpButton.setAlignmentX(Component.CENTER_ALIGNMENT);
