@@ -8,7 +8,7 @@ public class Main {
 			frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 			frame.pack();
 			frame.setLocationRelativeTo(null);
-			frame.setSize(1000, 500);
+			frame.setSize(1500, 800);
 			frame.setVisible(true);
 		});
 	}
