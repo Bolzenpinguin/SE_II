@@ -54,7 +54,7 @@ public class Play extends JPanel {
         });
 
         JScrollPane scrollPane = new JScrollPane(driverList);
-        scrollPane.setPreferredSize(new Dimension(200, 300)); // Set preferred size
+        scrollPane.setPreferredSize(new Dimension(200, 500)); // Set preferred size
 
         JPanel listPanel = new JPanel();
         listPanel.add(scrollPane);
