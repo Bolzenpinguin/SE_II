@@ -253,7 +253,13 @@ private static int berechnePunkte(int tippPlatzierung, int ergebnisPlatzierung) 
         try (BufferedReader reader = new BufferedReader(new FileReader("java_projekt/Tipp1/textContent/Results.csv"))){
             String line;
             while ((line = reader.readLine()) != null){
-                content.append(line).append("\n");
+                String[] splitLine = line.split(",");
+                if (splitLine.length == 2) {
+                    String name = splitLine[0];
+                    String points = splitLine[1];
+                    String formattedLine = "Fahrer: " + name + ", Punkte: " + points;
+                    content.append(formattedLine).append("\n");
+                }
             }
         } catch (IOException e){
             e.printStackTrace();
