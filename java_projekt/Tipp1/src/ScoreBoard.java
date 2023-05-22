@@ -38,7 +38,7 @@ public class ScoreBoard extends JPanel {
         JScrollPane scoreScrollPane = new JScrollPane(scoreTable);
         add(scoreScrollPane);
 
-        // Create a JPanel with FlowLayout to center the button
+        // Create a JPanel with FlowLayout to center the label
         JPanel labelPanel = new JPanel(new FlowLayout(FlowLayout.CENTER));
         JLabel resultsLabel = new JLabel("Ergebnisse");
         labelPanel.add(resultsLabel);
