@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_VKHH0PiJEe2xia1akxy0gw" name="Tipp1-UML">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_VM5WEPiJEe2xia1akxy0gw">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Class" xmi:id="_hNy8IPiJEe2xia1akxy0gw" name="Help">
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_2AYgoPiREe2xia1akxy0gw" name="Help">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_4Bh5APiREe2xia1akxy0gw" name="frame" type="_6OZygPiMEe2xia1akxy0gw"/>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_seOSEPiKEe2xia1akxy0gw" name="Instructions">
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_xIHxMPiREe2xia1akxy0gw" name="Instructions">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_0HHR4PiREe2xia1akxy0gw" name="frame" type="_6OZygPiMEe2xia1akxy0gw"/>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_0Cr3IPiMEe2xia1akxy0gw" name="MainMenu">
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_HEkP0PiREe2xia1akxy0gw" name="MainMenu">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_KJYrsPiREe2xia1akxy0gw" name="frame" type="_6OZygPiMEe2xia1akxy0gw"/>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_6OZygPiMEe2xia1akxy0gw" name="MainFrame">
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_BqtMAPiNEe2xia1akxy0gw" name="showPanel">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_Os5TIPiREe2xia1akxy0gw" name="name">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_IZZRkPiNEe2xia1akxy0gw" name="MainFrame"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_h5dygPiNEe2xia1akxy0gw" name="Play">
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_BLpcAPiOEe2xia1akxy0gw" name="Play">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_AyDI4PiREe2xia1akxy0gw" name="frame" type="_6OZygPiMEe2xia1akxy0gw"/>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_EM1NsPiREe2xia1akxy0gw" name="scoreBoard" type="_fkKSkPiOEe2xia1akxy0gw"/>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_CSl18PiOEe2xia1akxy0gw" name="loadDriversFromCsv" visibility="private"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_IyFo8PiOEe2xia1akxy0gw" name="saveOrder" visibility="private"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_KwE_oPiOEe2xia1akxy0gw" name="evaluateTips" visibility="private"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_OQ-6kPiOEe2xia1akxy0gw" name="calculatePoints" visibility="private" isStatic="true">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_1UzCcPiQEe2xia1akxy0gw" name="tippPlace">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedParameter>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_4fWS4PiQEe2xia1akxy0gw" name="resultePlace">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_W6vlsPiOEe2xia1akxy0gw" name="updateScore" visibility="private"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_fkKSkPiOEe2xia1akxy0gw" name="ScoreBoard">
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_ixJzAPiOEe2xia1akxy0gw" name="ScoreBoard">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_l1vTcPiQEe2xia1akxy0gw" name="frame" type="_6OZygPiMEe2xia1akxy0gw"/>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_ayPmQPiPEe2xia1akxy0gw" name="updateData"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_cxln0PiPEe2xia1akxy0gw" name="loadScoreData" visibility="private"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_glMcUPiPEe2xia1akxy0gw" name="loadResultsData" visibility="private"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_jRdOQPiPEe2xia1akxy0gw" name="createTable" visibility="private">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_RaNqcPiQEe2xia1akxy0gw" name="data">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedParameter>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_WvLkAPiQEe2xia1akxy0gw" name="columnNames">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_mtyLMPiPEe2xia1akxy0gw" name="getHeaderLine" visibility="private">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_772rcPiPEe2xia1akxy0gw" name="filePath">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedParameter>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_I35ZMPiSEe2xia1akxy0gw"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_K17MIPiSEe2xia1akxy0gw"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_MBhckPiSEe2xia1akxy0gw"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_NSptQPiSEe2xia1akxy0gw"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_OHBJcPiSEe2xia1akxy0gw"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_TCI_oPiSEe2xia1akxy0gw"/>
+</uml:Model>
