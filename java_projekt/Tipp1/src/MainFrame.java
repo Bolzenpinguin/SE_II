@@ -1,6 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
 
+
 /**
  * The "MainFrame" class extends JFrame and represents the main window of the application.
  * It manages the different panels/views using CardLayout, including the main menu, help,
