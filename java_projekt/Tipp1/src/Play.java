@@ -10,10 +10,23 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
+/**
+ * This class is responsible for programming the game window.
+ * It extends the JPanel class and creates and manages the application's main menu.
+ */
+
 public class Play extends JPanel {
     private DefaultListModel<String> listModel;
     private JList<String> driverList;
     private ScoreBoard scoreBoard;
+
+    /**
+     * Constructor of the Play class.
+     * Creates a game window with the given data.
+     *
+     * @param frame      The main window of the application.
+     * @param scoreBoard The Scoreboard object for updating data.
+     */
 
     public Play(MainFrame frame, ScoreBoard scoreBoard) {
         this.scoreBoard = scoreBoard;
@@ -78,6 +91,11 @@ public class Play extends JPanel {
 
     }
 
+    /**
+     * Loads the driver data from the score CSV file.
+     * Adds the driver names to the list.
+     */
+
     private void loadDriversFromCsv() {
         try (BufferedReader reader = new BufferedReader(new FileReader("java_projekt/Tipp1/textContent/Score.csv"))) {
             String line;
@@ -92,6 +110,10 @@ public class Play extends JPanel {
             e.printStackTrace();
         }
     }
+
+    /**
+     * TransferHandler class for list item drag-and-drop.
+     */
 
     class ListItemTransferHandler extends TransferHandler {
         @Override
@@ -130,6 +152,10 @@ public class Play extends JPanel {
         }
     }
 
+    /**
+    * Saves the order of the drivers in a CSV file.
+    */
+
     private void saveOrder() {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter("java_projekt/Tipp1/textContent/Tipp.csv"))) {
             for (int i = 0; i < listModel.getSize(); i++) {
@@ -144,19 +170,23 @@ public class Play extends JPanel {
         }
     }
 
+   /**
+    * Evaluates the tips based on the results and saves the points in a CSV file.
+    */
+
     private void evaluateTips() {
         String tippsFile = "java_projekt/Tipp1/textContent/Tipp.csv";
-        String siegerFile = "java_projekt/Tipp1/textContent/Score.csv";
+        String winnerFile = "java_projekt/Tipp1/textContent/Score.csv";
         String resultsFile = "java_projekt/Tipp1/textContent/Results.csv";
 
         try (BufferedReader tippsReader = new BufferedReader(new FileReader(tippsFile));
-            BufferedReader ergebnisReader = new BufferedReader(new FileReader(siegerFile));
+            BufferedReader resultReader = new BufferedReader(new FileReader(winnerFile));
             BufferedWriter resultsWriter = new BufferedWriter(new FileWriter(resultsFile))) {
 
-        ergebnisReader.readLine(); // Erste Zeile der Ergebnisdatei überspringen
+        resultReader.readLine(); 
 
         String tippLine;
-        String ergebnisLine;
+        String resultLine;
 
         while ((tippLine = tippsReader.readLine()) != null) {
             String[] tippData = tippLine.split(",");
@@ -164,25 +194,25 @@ public class Play extends JPanel {
             int platzierung = Integer.parseInt(tippData[0]);
             String tippFahrer = tippData[1];
 
-            ergebnisReader.mark(4096); // Markiere die aktuelle Position im Stream
+            resultReader.mark(4096); 
 
-            while ((ergebnisLine = ergebnisReader.readLine()) != null) {
-                String[] ergebnisData = ergebnisLine.split(",");
-                String ergebnisFahrer = ergebnisData[2]; // Index 2 für den Fahrernamen
+            while ((resultLine = resultReader.readLine()) != null) {
+                String[] resultData = resultLine.split(",");
+                String resultFahrer = resultData[2]; // Index 2 für den Fahrernamen
 
-                if (tippFahrer.equals(ergebnisFahrer)) {
-                    int ergebnisPlatzierung = Integer.parseInt(ergebnisData[0]);
+                if (tippFahrer.equals(resultFahrer)) {
+                    int resultPlacement = Integer.parseInt(resultData[0]);
 
-                    int punkteVergeben = berechnePunkte(platzierung, ergebnisPlatzierung);
+                    int pointsGiven = calculatePoints(platzierung, resultPlacement);
                     
-                    resultsWriter.write(tippFahrer + "," + punkteVergeben);
+                    resultsWriter.write(tippFahrer + "," + pointsGiven);
                     resultsWriter.newLine();
 
                     break; // Fahrer gefunden, Schleife verlassen
                 }
             }
 
-            ergebnisReader.reset(); // Setze den Stream auf die markierte Position zurück
+            resultReader.reset(); // Setze den Stream auf die markierte Position zurück
         }
         resultsWriter.flush();
     } catch (IOException e) {
@@ -190,9 +220,17 @@ public class Play extends JPanel {
     }
 }
 
-private static int berechnePunkte(int tippPlatzierung, int ergebnisPlatzierung) {
-    int platzDiff = Math.abs(tippPlatzierung - ergebnisPlatzierung);
-    switch (platzDiff) {
+
+    /** 
+    * Calculates the points based on the tip placement and the result placement.
+    *
+    * @param tipPlacement     The placement of the tip.
+    * @param resultPlacement  The actual result placement.
+    * @return The points assigned to the tip.
+    */
+private static int calculatePoints(int tippPlacement, int resultPlacement) {
+    int placeDiff = Math.abs(tippPlacement - resultPlacement);
+    switch (placeDiff) {
         case 0:
             return 100;
         case 1:
@@ -204,9 +242,13 @@ private static int berechnePunkte(int tippPlatzierung, int ergebnisPlatzierung) 
         case 4:
             return 20;
         default:
-            return 0; // für platzDiff größer als 4
+            return 0; // for placeDiff > 4
     }
 }
+
+    /**
+     * Updates the scores of the drivers randomly and saves them in a CSV file.
+    */
 
     private void updateScore() {
         Random random = new Random();
