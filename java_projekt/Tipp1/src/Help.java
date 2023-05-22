@@ -29,7 +29,9 @@ public class Help extends JPanel {
         JButton backButton = new JButton("Back to Main Menu");
         backButton.addActionListener(e -> frame.showPanel("MainMenu"));
 
-        add(backButton, BorderLayout.PAGE_END);
+        JPanel buttonPanel = new JPanel(new FlowLayout(FlowLayout.CENTER));
+        buttonPanel.add(backButton);
+        add(buttonPanel, BorderLayout.PAGE_END);
 
         try (BufferedReader reader = new BufferedReader(new FileReader("java_projekt/Tipp1/textContent/Help.txt"))) {
             // Read the help information from the text file and display it in the text area
