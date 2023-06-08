@@ -19,10 +19,11 @@ public class MainMenu extends JPanel {
         setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
 
         // Create buttons for menu options
-        JButton playButton = new JButton("Play");
-        JButton helpButton = new JButton("Help");
+        JButton playButton = new JButton("Spielen");
+        JButton helpButton = new JButton("Hilfe");
         JButton scoreButton = new JButton("Scoreboard");
-        JButton instructionsButton = new JButton("Instructions");
+        JButton instructionsButton = new JButton("Anleitung");
+        JButton aboutButton = new JButton("About");
         JButton quitButton = new JButton("Quit");
 
         // Align buttons horizontally at the center
@@ -30,6 +31,7 @@ public class MainMenu extends JPanel {
         helpButton.setAlignmentX(Component.CENTER_ALIGNMENT);
         scoreButton.setAlignmentX(Component.CENTER_ALIGNMENT);
         instructionsButton.setAlignmentX(Component.CENTER_ALIGNMENT);
+        aboutButton.setAlignmentX(Component.CENTER_ALIGNMENT);
         quitButton.setAlignmentX(Component.CENTER_ALIGNMENT);
 
         // Add action listeners to the buttons to switch to corresponding views or exit the application
@@ -37,6 +39,7 @@ public class MainMenu extends JPanel {
         helpButton.addActionListener(e -> frame.showPanel("Help"));
         scoreButton.addActionListener(e -> frame.showPanel("ScoreBoard"));
         instructionsButton.addActionListener(e -> frame.showPanel("Instructions"));
+        aboutButton.addActionListener(e -> frame.showPanel("About"));
         quitButton.addActionListener(e -> System.exit(0));
 
 
@@ -50,6 +53,8 @@ public class MainMenu extends JPanel {
         add(instructionsButton);
         add(Box.createRigidArea(new Dimension(0, 10)));
         add(helpButton);
+        add(Box.createRigidArea(new Dimension(0, 10)));
+        add(aboutButton);
         add(Box.createRigidArea(new Dimension(0, 10)));
 
         // Add quit button with vertical glue

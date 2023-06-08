@@ -26,7 +26,7 @@ public class Help extends JPanel {
         add(scrollPane, BorderLayout.CENTER);
 
         // Create the back button
-        JButton backButton = new JButton("Back to Main Menu");
+        JButton backButton = new JButton("Zurück zum Hauptmenü");
         backButton.addActionListener(e -> frame.showPanel("MainMenu"));
 
         JPanel buttonPanel = new JPanel(new FlowLayout(FlowLayout.CENTER));

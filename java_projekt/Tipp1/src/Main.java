@@ -29,7 +29,7 @@ public class Main {
             frame.setLocationRelativeTo(null);
 
             // Set the size of the main window
-            frame.setSize(1000, 500);
+            frame.setSize(1500, 800);
 
             // Make the main window visible
             frame.setVisible(true);
