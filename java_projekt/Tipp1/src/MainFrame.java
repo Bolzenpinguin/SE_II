@@ -14,6 +14,7 @@ public class MainFrame extends JFrame {
     Help help;
     Instructions instructions;
     CardLayout cardLayout;
+    About about;
 
     /**
      * Constructor for the "MainFrame" class.
@@ -29,6 +30,7 @@ public class MainFrame extends JFrame {
         play = new Play(this,scoreBoard);
         scoreBoard = new ScoreBoard(this);
         instructions = new Instructions(this);
+        about = new About(this);
 
         // Add the panels/views to the main frame with corresponding names
         add(mainMenu, "MainMenu");
@@ -36,6 +38,7 @@ public class MainFrame extends JFrame {
         add(play, "Play");
         add(scoreBoard, "ScoreBoard");
         add(instructions, "Instructions");
+        add(about, "About");
     }
 
     /**
