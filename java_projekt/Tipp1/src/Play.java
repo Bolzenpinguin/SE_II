@@ -183,68 +183,68 @@ public class Play extends JPanel {
             BufferedReader resultReader = new BufferedReader(new FileReader(winnerFile));
             BufferedWriter resultsWriter = new BufferedWriter(new FileWriter(resultsFile))) {
 
-        resultReader.readLine(); 
+            resultReader.readLine();
 
-        String tippLine;
-        String resultLine;
+            String tippLine;
+            String resultLine;
 
-        while ((tippLine = tippsReader.readLine()) != null) {
-            String[] tippData = tippLine.split(",");
+            while ((tippLine = tippsReader.readLine()) != null) {
+                String[] tippData = tippLine.split(",");
 
-            int platzierung = Integer.parseInt(tippData[0]);
-            String tippFahrer = tippData[1];
+                int platzierung = Integer.parseInt(tippData[0]);
+                String tippFahrer = tippData[1];
 
-            resultReader.mark(4096); 
+                resultReader.mark(4096);
 
-            while ((resultLine = resultReader.readLine()) != null) {
-                String[] resultData = resultLine.split(",");
-                String resultFahrer = resultData[2]; // Index 2 für den Fahrernamen
+                while ((resultLine = resultReader.readLine()) != null) {
+                    String[] resultData = resultLine.split(",");
+                    String resultFahrer = resultData[2]; // Index 2 für den Fahrernamen
 
-                if (tippFahrer.equals(resultFahrer)) {
-                    int resultPlacement = Integer.parseInt(resultData[0]);
+                    if (tippFahrer.equals(resultFahrer)) {
+                        int resultPlacement = Integer.parseInt(resultData[0]);
 
-                    int pointsGiven = calculatePoints(platzierung, resultPlacement);
-                    
-                    resultsWriter.write(tippFahrer + "," + pointsGiven);
-                    resultsWriter.newLine();
+                        int pointsGiven = calculatePoints(platzierung, resultPlacement);
 
-                    break; // Fahrer gefunden, Schleife verlassen
+                        resultsWriter.write(tippFahrer + "," + pointsGiven);
+                        resultsWriter.newLine();
+
+                        break; // Fahrer gefunden, Schleife verlassen
+                    }
                 }
-            }
 
-            resultReader.reset(); // Setze den Stream auf die markierte Position zurück
+                resultReader.reset(); // Setze den Stream auf die markierte Position zurück
+            }
+            resultsWriter.flush();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
-        resultsWriter.flush();
-    } catch (IOException e) {
-        e.printStackTrace();
     }
-}
 
 
     /** 
     * Calculates the points based on the tip placement and the result placement.
     *
-    * @param tipPlacement     The placement of the tip.
+    * @param tippPlacement     The placement of the tip.
     * @param resultPlacement  The actual result placement.
     * @return The points assigned to the tip.
     */
-private static int calculatePoints(int tippPlacement, int resultPlacement) {
-    int placeDiff = Math.abs(tippPlacement - resultPlacement);
-    switch (placeDiff) {
-        case 0:
-            return 100;
-        case 1:
-            return 80;
-        case 2:
-            return 60;
-        case 3:
-            return 40;
-        case 4:
-            return 20;
-        default:
-            return 0; // for placeDiff > 4
+    private static int calculatePoints(int tippPlacement, int resultPlacement) {
+        int placeDiff = Math.abs(tippPlacement - resultPlacement);
+        switch (placeDiff) {
+            case 0:
+                return 100;
+            case 1:
+                return 80;
+            case 2:
+                return 60;
+            case 3:
+                return 40;
+            case 4:
+                return 20;
+            default:
+                return 0; // for placeDiff > 4
+        }
     }
-}
 
     /**
      * Updates the scores of the drivers randomly and saves them in a CSV file.
