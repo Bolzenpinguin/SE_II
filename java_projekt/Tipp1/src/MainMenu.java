@@ -1,7 +1,6 @@
 import javax.swing.*;
 import java.awt.*;
 
-
 /**
  * The "MainMenu" class extends JPanel and represents the main menu view of the application.
  * It displays buttons for different menu options, including play, help, scoreboard, instructions,

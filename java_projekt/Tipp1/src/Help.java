@@ -33,7 +33,7 @@ public class Help extends JPanel {
         buttonPanel.add(backButton);
         add(buttonPanel, BorderLayout.PAGE_END);
 
-        try (BufferedReader reader = new BufferedReader(new FileReader("java_projekt/Tipp1/textContent/Help.txt"))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader("java_projekt/Tipp1/resources/textContent/Help.txt"))) {
             // Read the help information from the text file and display it in the text area
             helpText.read(reader, null);
         } catch (IOException e) {

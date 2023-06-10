@@ -4,15 +4,14 @@ import java.awt.*;
 import java.io.*;
 import java.util.*;
 
-
 /**
 *   The ScoreBoard class is responsible for the programming of the scoreboard window.
 *   It extends the JPanel class.
 */
 
 public class ScoreBoard extends JPanel {
-    private JTable scoreTable;
-    private JTable resultsTable;
+    private final JTable scoreTable;
+    private final JTable resultsTable;
 
     /**
     *   Constructs a new instance of the ScoreBoard class.
@@ -28,7 +27,7 @@ public class ScoreBoard extends JPanel {
 
         // get first line as heading
         JPanel headerPanel = new JPanel(new FlowLayout(FlowLayout.CENTER));
-        JLabel headingLabel = new JLabel(getHeaderLine("java_projekt/Tipp1/textContent/Score.csv"), SwingConstants.CENTER);
+        JLabel headingLabel = new JLabel(getHeaderLine(), SwingConstants.CENTER);
         headerPanel.add(headingLabel);
         add(headerPanel);
 
@@ -81,7 +80,7 @@ public class ScoreBoard extends JPanel {
     */
     private String[][] loadScoreData() {
         ArrayList<String[]> data = new ArrayList<>();
-        try (BufferedReader reader = new BufferedReader(new FileReader("java_projekt/Tipp1/textContent/Score.csv"))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader("java_projekt/Tipp1/resources/textContent/Score.csv"))) {
             String line;
             reader.readLine();
             while ((line = reader.readLine()) != null) {
@@ -100,7 +99,7 @@ public class ScoreBoard extends JPanel {
     */
     private String[][] loadResultsData() {
         ArrayList<String[]> data = new ArrayList<>();
-        try (BufferedReader reader = new BufferedReader(new FileReader("java_projekt/Tipp1/textContent/Results.csv"))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader("java_projekt/Tipp1/resources/textContent/Results.csv"))) {
             String line;
             while ((line = reader.readLine()) != null) {
                 String[] rowData = line.split(",");
@@ -130,13 +129,13 @@ public class ScoreBoard extends JPanel {
 
     /**
      * Reads the header line from the specified file and returns it as a string.
-     * @param filePath The path to the file from which to read the header line.
+     *
      * @return The header line as a string, or an empty string if the file cannot be read.
-    */
-    private String getHeaderLine(String filePath){
+     */
+    private String getHeaderLine(){
         String line = "";
-        try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
-            if ((line = br.readLine()) != null) {}
+        try (BufferedReader br = new BufferedReader(new FileReader("java_projekt/Tipp1/resources/textContent/Score.csv"))) {
+            line = br.readLine();
         }
         catch (IOException e) {
             e.printStackTrace();

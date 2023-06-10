@@ -35,7 +35,7 @@ public class Instructions extends JPanel {
         buttonPanel.add(backButton);
         add(buttonPanel, BorderLayout.PAGE_END);
 
-        try (BufferedReader reader = new BufferedReader(new FileReader("java_projekt/Tipp1/textContent/Instructions.txt"))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader("java_projekt/Tipp1/resources/textContent/Instructions.txt"))) {
             // Read the instruction information from the text file and display it in the text area
             instructionText.read(reader, null);
         } catch (IOException e) {
