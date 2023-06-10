@@ -38,7 +38,7 @@ public class About extends JPanel {
         add(buttonPanel, BorderLayout.PAGE_END);
 
         // Attempt to read the about text from a file and load it into the text area
-        try (BufferedReader reader = new BufferedReader(new FileReader("java_projekt/Tipp1/resources/textContent/About.txt"))) {
+        try (BufferedReader reader = new BufferedReader(new InputStreamReader(getClass().getResourceAsStream("/Resource/textContent/About.txt")))) {
             aboutText.read(reader, null);
         } catch (IOException e) {
             aboutText.setText("About text not found");

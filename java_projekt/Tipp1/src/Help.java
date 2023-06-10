@@ -33,11 +33,10 @@ public class Help extends JPanel {
         buttonPanel.add(backButton);
         add(buttonPanel, BorderLayout.PAGE_END);
 
-        try (BufferedReader reader = new BufferedReader(new FileReader("java_projekt/Tipp1/resources/textContent/Help.txt"))) {
-            // Read the help information from the text file and display it in the text area
+        // Attempt to read the about text from a file and load it into the text area
+        try (BufferedReader reader = new BufferedReader(new InputStreamReader(getClass().getResourceAsStream("/Resource/textContent/Help.txt")))) {
             helpText.read(reader, null);
         } catch (IOException e) {
-            // If the file is not found or cannot be read, display an error message
             helpText.setText("Help file not found!");
         }
     }

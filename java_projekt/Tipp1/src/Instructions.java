@@ -1,8 +1,8 @@
 import javax.swing.*;
 import java.awt.*;
 import java.io.BufferedReader;
-import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 
 /**
  * The "Instructions" class extends JPanel and represents an instructions view.
@@ -35,7 +35,7 @@ public class Instructions extends JPanel {
         buttonPanel.add(backButton);
         add(buttonPanel, BorderLayout.PAGE_END);
 
-        try (BufferedReader reader = new BufferedReader(new FileReader("java_projekt/Tipp1/resources/textContent/Instructions.txt"))) {
+        try (BufferedReader reader = new BufferedReader(new InputStreamReader(getClass().getResourceAsStream("/Resource/textContent/Instructions.txt")))) {
             // Read the instruction information from the text file and display it in the text area
             instructionText.read(reader, null);
         } catch (IOException e) {

@@ -80,7 +80,7 @@ public class ScoreBoard extends JPanel {
     */
     private String[][] loadScoreData() {
         ArrayList<String[]> data = new ArrayList<>();
-        try (BufferedReader reader = new BufferedReader(new FileReader("java_projekt/Tipp1/resources/textContent/Score.csv"))) {
+        try (BufferedReader reader = new BufferedReader(new InputStreamReader(getClass().getResourceAsStream("/Resource/textContent/Score.csv")))) {
             String line;
             reader.readLine();
             while ((line = reader.readLine()) != null) {
@@ -99,7 +99,7 @@ public class ScoreBoard extends JPanel {
     */
     private String[][] loadResultsData() {
         ArrayList<String[]> data = new ArrayList<>();
-        try (BufferedReader reader = new BufferedReader(new FileReader("java_projekt/Tipp1/resources/textContent/Results.csv"))) {
+        try (BufferedReader reader = new BufferedReader(new InputStreamReader(getClass().getResourceAsStream("/Resource/textContent/Results.csv")))) {
             String line;
             while ((line = reader.readLine()) != null) {
                 String[] rowData = line.split(",");
@@ -134,7 +134,7 @@ public class ScoreBoard extends JPanel {
      */
     private String getHeaderLine(){
         String line = "";
-        try (BufferedReader br = new BufferedReader(new FileReader("java_projekt/Tipp1/resources/textContent/Score.csv"))) {
+        try (BufferedReader br = new BufferedReader(new FileReader("java_projekt/Tipp1/src/Resource/textContent/Score.csv"))) {
             line = br.readLine();
         }
         catch (IOException e) {
