@@ -16,9 +16,9 @@ import java.util.List;
  */
 
 public class Play extends JPanel {
-    private DefaultListModel<String> listModel;
-    private JList<String> driverList;
-    private ScoreBoard scoreBoard;
+    private final DefaultListModel<String> listModel;
+    private final JList<String> driverList;
+    private final ScoreBoard scoreBoard;
 
     /**
      * Constructor of the Play class.
@@ -43,7 +43,7 @@ public class Play extends JPanel {
 
         // Set list renderer for rankings and center alignment
         driverList.setCellRenderer(new ListCellRenderer<>() {
-            private JLabel label;
+            private final JLabel label;
 
             {
                 label = new JLabel();
@@ -97,7 +97,7 @@ public class Play extends JPanel {
      */
 
     private void loadDriversFromCsv() {
-        try (BufferedReader reader = new BufferedReader(new FileReader("java_projekt/Tipp1/textContent/Score.csv"))) {
+        try (BufferedReader reader = new BufferedReader(new InputStreamReader(getClass().getResourceAsStream("/Resource/textContent/Score.csv")))) {
             String line;
             reader.readLine(); // Skip the header line
             while ((line = reader.readLine()) != null) {
@@ -157,7 +157,7 @@ public class Play extends JPanel {
     */
 
     private void saveOrder() {
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter("java_projekt/Tipp1/textContent/Tipp.csv"))) {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter("java_projekt/Tipp1/src/Resource/textContent/Tipp.csv"))) {
             for (int i = 0; i < listModel.getSize(); i++) {
 
                 // Write the driver
@@ -175,13 +175,13 @@ public class Play extends JPanel {
     */
 
     private void evaluateTips() {
-        String tippsFile = "java_projekt/Tipp1/textContent/Tipp.csv";
-        String winnerFile = "java_projekt/Tipp1/textContent/Score.csv";
-        String resultsFile = "java_projekt/Tipp1/textContent/Results.csv";
+        String tippsFile = "/Resource/textContent/Tipp.csv";
+        String winnerFile = "/Resource/textContent/Score.csv";
+        String resultsFile = "java_projekt/Tipp1/src/Resource/textContent/Results.csv";
 
-        try (BufferedReader tippsReader = new BufferedReader(new FileReader(tippsFile));
-            BufferedReader resultReader = new BufferedReader(new FileReader(winnerFile));
-            BufferedWriter resultsWriter = new BufferedWriter(new FileWriter(resultsFile))) {
+        try (BufferedReader tippsReader = new BufferedReader(new InputStreamReader(getClass().getResourceAsStream(tippsFile)));
+             BufferedReader resultReader = new BufferedReader(new InputStreamReader(getClass().getResourceAsStream(winnerFile)));
+             BufferedWriter resultsWriter = new BufferedWriter(new FileWriter(resultsFile))) {
 
             resultReader.readLine();
 
@@ -253,8 +253,8 @@ public class Play extends JPanel {
     private void updateScore() {
         Random random = new Random();
         List<String[]> drivers = new ArrayList<>();
-    
-        try (BufferedReader reader = new BufferedReader(new FileReader("java_projekt/Tipp1/textContent/Score.csv"))) {
+
+        try (BufferedReader reader = new BufferedReader(new InputStreamReader(getClass().getResourceAsStream("/Resource/textContent/Score.csv")))){
             String line;
             reader.readLine(); // skip the first line
             while ((line = reader.readLine()) != null) {
@@ -276,8 +276,8 @@ public class Play extends JPanel {
                 return Integer.compare(Integer.parseInt(s2[2]), Integer.parseInt(s1[2]));
             }
         });
-    
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter("java_projekt/Tipp1/textContent/Score.csv"))) {
+
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter("java_projekt/Tipp1/src/Resource/textContent/Score.csv"))) {
             writer.write("Session 2023");
             writer.newLine();
             for (int i = 0; i < drivers.size(); i++) {
@@ -290,9 +290,12 @@ public class Play extends JPanel {
             e.printStackTrace();
         }
 
-        scoreBoard.updateData();
+        if (scoreBoard != null) {
+            scoreBoard.updateData();
+        }
+
         StringBuilder content = new StringBuilder();
-        try (BufferedReader reader = new BufferedReader(new FileReader("java_projekt/Tipp1/textContent/Results.csv"))){
+        try (BufferedReader reader = new BufferedReader(new FileReader("java_projekt/Tipp1/src/Resource/textContent/Results.csv"))){
             String line;
             while ((line = reader.readLine()) != null){
                 String[] splitLine = line.split(",");

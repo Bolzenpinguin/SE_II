@@ -1,0 +1,17 @@
+Wie spiele ich Tipp1?
+
+Trage dazu einfach in das passende Textfeld den Namen des Fahrers und die von dir erwartetet Platzierung ein.
+
+Das sind die zu erreichenden Punkt:
+
+
+richtig getippt +100 Punkte
+ein Platz daneben +80 Punkte
+zwei Plätze daneben +60 Punkte
+drei Plätze daneben + 40 Punkte
+vier Plätze daneben +20 Punkte
+mehr als vier Plätze daneben -+0 Punkte
+
+
+
+Viel Spaß beim Tippen wünscht dir Codecraft!
